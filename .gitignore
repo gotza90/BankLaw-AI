@@ -1,0 +1,23 @@
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.kilo/
+.env
+.env.*
+!.env.example
+data/chroma/
+
+ocr_law194_sample.txt
+hide_out.txt
+
+data/
+_law194_only/banklaw_step1/README.md
+data/
+_law194_only/
+banklaw_step1/README.md
+
+= [
+= [
+/= \[

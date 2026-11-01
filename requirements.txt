@@ -1,0 +1,52 @@
+# Runtime and test dependencies for banklaw-ai.
+#
+# This file lists only the third-party packages directly imported by the
+# project. It does not include transitive dependencies, standard-library
+# modules, or CUDA/system packages.
+#
+# Versions reflect the currently working .venv environment.
+
+# Web UI
+streamlit==1.64.0
+
+# Vector database
+chromadb==1.5.9
+
+# Embeddings and cross-encoder re-ranking
+sentence-transformers==6.0.1
+
+# PDF text extraction (pypdf + PyMuPDF + Tesseract OCR fallback)
+pypdf==6.18.1
+pymupdf==1.28.2
+pytesseract==0.3.13
+
+# LLM generation
+ollama
+
+# LangChain integration (ChatOllama, ChatPromptTemplate, Document objects)
+langchain
+langchain-ollama
+
+# PDF font encoding: CIB product PDFs use CFF Type1 fonts that pypdf/PyMuPDF
+# cannot fully decode without fontTools.
+fonttools
+
+# Numerical / data helpers
+numpy==2.5.3
+pandas==3.0.6
+scikit-learn==1.9.1
+
+# torch + torchvision: transformers 5.x references torchvision at import
+# time (image/video backends). The CPU wheels are pinned to match the
+# installed torch so the optional dependency is always satisfied.
+torch==2.14.0
+torchvision==0.29.0
+
+# Image handling (OCR preprocessing)
+pillow==12.3.0
+
+# Optional Gemini embedding experiment (main.py only)
+google-genai
+
+# Testing
+pytest
